@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'The name of the Font Family Here';
-    src: URL('font.ttf') format('truetype');
-  }
+  font-family: "The name of the Font Family Here";
+  src: URL("font.ttf") format("truetype");
+}
 
-  a.nostyle:link {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: pointer;
-  }
-  
-  a.nostyle:visited {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: pointer;
-  }
+a.nostyle:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.nostyle:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
 
 body {
-    /* background-color: #060c0f; */
+  /* background-color: #060c0f; */
   background-color: #141414;
   color: rgb(164, 164, 164);
   font-family: "Varela Round", "Source Sans Pro", arial, sans-serif;
@@ -24,28 +24,28 @@ body {
 }
 
 .glow-title {
-    font-size: 60px;
-    margin: 0;
-    position: relative;
-    z-index: 3;
-    padding: 10px;
-    background-color: #141414;
-    color: #fff;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-  }
+  font-size: 60px;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 10px;
+  background-color: #141414;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 
+.glow-title.large {
+  font-size: 50px;
+}
+@media (min-width: 768px) {
   .glow-title.large {
-    font-size: 50px;
+    font-size: 90px;
   }
-  @media (min-width: 768px) {
-    .glow-title.large {
-        font-size: 90px;
-      }
-  }
+}
 
 h2,
 h3,
@@ -118,9 +118,9 @@ h4 {
 /* sections */
 
 .sec-title {
-    font-size: 50px;
-    font-weight: 400;
-  }
+  font-size: 50px;
+  font-weight: 400;
+}
 
 .section:hover .sec-title {
   color: #eee;
@@ -129,80 +129,105 @@ h4 {
   color: #eee;
 }
 
-/* YouTube */
-.section.you-tube:hover {
-  box-shadow: 0px 0px 15px 5px #ff3333dd;
-}
-.section.you-tube:hover .sec-img {
-  color: #ff3333dd;
-}
-/* dotnet conf */
-.section.dotnet-conf:hover {
-  box-shadow: 0px 0px 15px 5px #8d2acfdd;
-}
-.section.dotnet-conf:hover .sec-img {
-  color: #8d2acfdd;
-}
+@media (max-width: 767.99px) {
+  .section .sec-title {
+    color: #eee;
+  }
 
-/* blog */
-.section.blog:hover {
-  box-shadow: 0px 0px 15px 5px #00ccffdd;
-}
-.section.blog:hover .sec-img {
-  color: #00ffffdd;
-}
+  /* YouTube */
+  .section.you-tube .sec-img {
+    color: #ff3333dd;
+  }
+  /* dotnet conf */
+  .section.dotnet-conf .sec-img {
+    color: #8d2acfdd;
+  }
+  /* blog */
+  .section.blog .sec-img {
+    color: #00ffffdd;
+  }
 
-/* tictactoe */
-.section.tictactoe:hover {
-  box-shadow: 0px 0px 15px 5px #00ff44aa;
+  /* tictactoe */
+  .section.tictactoe .sec-img {
+    color: #00ff44aa;
+  }
 }
-.section.tictactoe:hover .sec-img {
-  color: #00ff44aa;
+@media (min-width: 768px) {
+  /* YouTube */
+  .section.you-tube:hover {
+    box-shadow: 0px 0px 15px 5px #ff3333dd;
+  }
+  .section.you-tube:hover .sec-img {
+    color: #ff3333dd;
+  }
+  /* dotnet conf */
+  .section.dotnet-conf:hover {
+    box-shadow: 0px 0px 15px 5px #8d2acfdd;
+  }
+  .section.dotnet-conf:hover .sec-img {
+    color: #8d2acfdd;
+  }
+
+  /* blog */
+  .section.blog:hover {
+    box-shadow: 0px 0px 15px 5px #00ccffdd;
+  }
+  .section.blog:hover .sec-img {
+    color: #00ffffdd;
+  }
+
+  /* tictactoe */
+  .section.tictactoe:hover {
+    box-shadow: 0px 0px 15px 5px #00ff44aa;
+  }
+  .section.tictactoe:hover .sec-img {
+    color: #00ff44aa;
+  }
 }
 
 .sec-title {
-    font-size: 50px;
-    font-weight: 400;
-  }
+  font-size: 50px;
+  font-weight: 400;
+}
 
 /* reach out */
 .reachout-title {
-    font-size: 40px;
-    font-weight: 400;
-  }
-  .reachout-desc {
-    font-size: 18px;
-  }
-  .reachout-code:hover {
-      cursor: pointer !important;
-  }
-  .reachout-code:hover .reachout-img {
-      box-shadow: 0px 0px 15px 8px #8d2acfdd;
-  }
-  .reachout-connect:hover {
-      cursor: pointer !important;
-  }
-  .reachout-connect:hover .reachout-img {
-      box-shadow: 0px 0px 15px 8px #00ccffdd;
-  }
-  .reachout-community:hover {
-      cursor: pointer !important;
-  }
-  .reachout-community:hover .reachout-img {
-      box-shadow: 0px 0px 15px 8px #00ff44aa;
-  }
+  font-size: 40px;
+  font-weight: 400;
+}
+.reachout-desc {
+  font-size: 18px;
+}
+.reachout-code:hover {
+  cursor: pointer !important;
+}
+.reachout-code:hover .reachout-img {
+  box-shadow: 0px 0px 15px 8px #8d2acfdd;
+}
+.reachout-connect:hover {
+  cursor: pointer !important;
+}
+.reachout-connect:hover .reachout-img {
+  box-shadow: 0px 0px 15px 8px #00ccffdd;
+}
+.reachout-community:hover {
+  cursor: pointer !important;
+}
+.reachout-community:hover .reachout-img {
+  box-shadow: 0px 0px 15px 8px #00ff44aa;
+}
 .reachout:hover {
-    color: white;
+  color: white;
 }
 .reachout-img {
-    width: 150px;
-  }
+  width: 150px;
+}
 
 @media (min-width: 992px) {
-    .sec-title {
-        font-size: 80px;
-        font-weight: 400;
-      }    
+  .sec-title {
+    font-size: 80px;
+    font-weight: 400;
+  }
 }
 @media (min-width: 1200px) {
   .reachout-img {
@@ -210,35 +235,30 @@ h4 {
   }
 }
 
-
-
-
 @media (min-width: 768px) {
-    .img-holder {
-      min-height: 200px;
-    }
+  .img-holder {
+    min-height: 200px;
   }
-  
-  @media (min-width: 992px) {  
-    .img-holder {
-      min-height: 250px;
-    }
+}
+
+@media (min-width: 992px) {
+  .img-holder {
+    min-height: 250px;
   }
-  
+}
 
 .aboutme-section {
-    font-size: 16px;
+  font-size: 16px;
 }
 .aboutme-header {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .aboutme-title {
-font-size: 30px;
-font-weight: 400;
-color: white;
+  font-size: 30px;
+  font-weight: 400;
+  color: white;
 }
-
 
 .main-div1::before {
   content: "";
