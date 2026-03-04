@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap');
+
+/* Split Screen Base */
+.split-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  z-index: 9999;
+  background-color: #000;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 1.2s ease;
+}
+
+.split-container.slide-up {
+  transform: translateY(-100vh);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.split {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.split::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s ease;
+  z-index: 1;
+}
+
+/* Left - Logical / Software */
+.split.left::before {
+  background: 
+    radial-gradient(circle at 30% 50%, rgba(10, 25, 47, 0.9) 0%, rgba(2, 10, 20, 0.98) 100%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.04"><path d="M10 10h80v80H10z" fill="none" stroke="%2364ffda" stroke-width="1"/></svg>');
+  background-size: cover, 50px 50px;
+}
+
+/* Right - Creative / Woodwork */
+.split.right::before {
+  background: 
+    radial-gradient(circle at 70% 50%, rgba(60, 35, 20, 0.9) 0%, rgba(20, 10, 5, 0.98) 100%),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.04"><circle cx="50" cy="50" r="40" fill="none" stroke="%23ffb84d" stroke-width="1"/></svg>');
+  background-size: cover, 100px 100px;
+}
+
+.split:hover {
+  width: 65%;
+}
+
+.split:hover::before {
+  transform: scale(1.03);
+  filter: brightness(1.2);
+}
+
+.split-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  transition: opacity 0.4s ease, transform 0.5s ease;
+}
+
+.split .split-content {
+  opacity: 0.6;
+}
+
+.split:hover .split-content {
+  opacity: 1;
+  transform: translateY(-10px);
+}
+
+.split-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.split-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #aaa;
+  transition: color 0.4s ease;
+}
+
+.split.left:hover .split-title {
+  color: #e6f1ff;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+}
+.split.left:hover .split-subtitle {
+  color: #64ffda;
+}
+
+.split.right:hover .split-title {
+  color: #ffecd2;
+  text-shadow: 0 0 20px rgba(255, 184, 77, 0.4);
+}
+.split.right:hover .split-subtitle {
+  color: #ffb84d;
+}
+
+/* Iconic element for brain half */
+.brain-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  stroke: #fff;
+}
+
+.split.left:hover .brain-icon {
+  transform: scale(1.1);
+  opacity: 1;
+  stroke: #64ffda;
+  filter: drop-shadow(0 0 8px rgba(100,255,218,0.5));
+}
+
+.split.right:hover .brain-icon {
+  transform: scale(1.1);
+  opacity: 1;
+  stroke: #ffb84d;
+  filter: drop-shadow(0 0 8px rgba(255,184,77,0.5));
+}
+
+/* Page content sections */
+.content-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.content-section.active {
+  display: block;
+  animation: contentFadeIn 1s forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes contentFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back button */
+.btn-back {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 10000;
+  background: rgba(20, 20, 20, 0.6);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  display: none;
+}
+
+.btn-back:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  transform: translateX(-5px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.btn-back.visible {
+  display: block;
+  animation: fadeInBack 0.5s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+@keyframes fadeInBack {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Aesthetically hiding scrollbar on split screen */
+body.split-active {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .split {
+    width: 100%;
+    height: 50%;
+  }
+  .split:hover {
+    width: 100%;
+    height: 60%;
+  }
+  .split-title {
+    font-size: 2.5rem;
+  }
+}
