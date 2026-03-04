@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en-ZA">
   <head>
     <meta charset="utf-8" />
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>filteredcode</title>
     <meta name="author" content="filteredcode.co.za" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Varela Round"
@@ -54,17 +54,26 @@
     <!-- Back Button -->
     <button id="btn-back" class="btn-back" onclick="goBack()">&#8592; Back</button>
 
+    <!-- Top Right Corner Logos -->
+    <img id="logo-software" src="filteredcode.png" alt="filteredcode" style="position: absolute; top: 0px; right: 0px; width: 160px; margin-top: 20px; z-index: 1000; display: none;" />
+    <img id="logo-creative" src="filteredart.png" alt="filteredart" style="position: absolute; top: 0px; right: 0px; width: 160px; margin-top: 20px; z-index: 1000; display: none;" />
+
     <!-- Software (Left) Content -->
-    <div id="software-content" class="content-section">
+    <div id="software-content" class="content-section" style="position: relative;">
+
 
       <!-- Hero Section for Software Services -->
-      <div class="wrapper top" style="height: 300px; margin-bottom: 20px;">
-        <div class="main-div main-div3">
-          <span class="glow-title large">Software Services</span>
+      <div class="container-lg pt-5 pb-5 mt-5">
+        <div class="row pt-5">
+          <div class="col-12 text-center">
+            <h2 class="software-hero-title">Software</h2>
+            <div class="software-hero-divider"></div>
+            <p class="software-hero-desc">
+              Architecting modern, <strong class="text-accent-teal">full-stack</strong> applications with a focus on <strong class="text-accent-teal">scalable</strong>, <strong class="text-accent-teal">cloud-native</strong> ecosystems.
+              Empowering businesses through seamless <strong class="text-accent-teal">AI integration</strong>
+            </p>
+          </div>
         </div>
-        <p class="text-center w-100" style="font-size: 1.2rem; color: #64ffda; margin-top: 10px; max-width: 800px; padding: 0 20px; z-index: 10; position: relative;">
-          Expert contracting specializing in Cloud Native Development, AI Solutions, and Seamless Systems Integration.
-        </p>
       </div>
 
       <!-- Services Section -->
@@ -72,32 +81,32 @@
         <div class="row pt-5 text-center">
           
           <div class="col-md-4 mb-5">
-            <div class="service-box p-4" style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; transition: transform 0.3s ease;">
+            <div class="service-box p-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#64ffda" viewBox="0 0 16 16" class="mb-4">
                 <path d="M11 2a3 3 0 0 1 2.996 2.853A4 4 0 0 1 14 9.5a3.5 3.5 0 0 1-3.5 3.5h-6A4.5 4.5 0 0 1 0 8.5 4.5 4.5 0 0 1 4.5 4a3 3 0 0 1 2.996-2.853A3 3 0 0 1 11 2zm-1.5 1A2.5 2.5 0 0 0 7 5.5a.5.5 0 0 1-1 0A3.5 3.5 0 0 1 10.5 2a.5.5 0 0 1 0 1z"/>
               </svg>
-              <h3 style="color: white; font-family: 'Outfit', sans-serif;">Cloud Native</h3>
-              <p style="color: #aaa; font-size: 1rem;">Building robust, scalable, and highly available applications leveraging modern cloud infrastructure and Azure architectures.</p>
+              <h3 class="service-title">Cloud Native</h3>
+              <p class="service-desc">Building robust, scalable, and highly available applications leveraging modern cloud infrastructure and Azure architectures.</p>
             </div>
           </div>
           
           <div class="col-md-4 mb-5">
-            <div class="service-box p-4" style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; transition: transform 0.3s ease;">
+            <div class="service-box p-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#e6f1ff" viewBox="0 0 16 16" class="mb-4">
                 <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2z"/>
               </svg>
-              <h3 style="color: white; font-family: 'Outfit', sans-serif;">AI Solutions</h3>
-              <p style="color: #aaa; font-size: 1rem;">Integrating advanced machine learning models and Generative AI into practical business applications to drive innovation.</p>
+              <h3 class="service-title">AI Solutions</h3>
+              <p class="service-desc">Integrating advanced machine learning models and Generative AI into practical business applications to drive innovation.</p>
             </div>
           </div>
 
           <div class="col-md-4 mb-5">
-            <div class="service-box p-4" style="background: rgba(255,255,255,0.03); border-radius: 12px; height: 100%; transition: transform 0.3s ease;">
+            <div class="service-box p-4">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#64ffda" viewBox="0 0 16 16" class="mb-4">
                 <path d="M2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H2zm8-8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2z"/>
               </svg>
-              <h3 style="color: white; font-family: 'Outfit', sans-serif;">Systems Integration</h3>
-              <p style="color: #aaa; font-size: 1rem;">Connecting disparate platforms and services seamlessly to streamline your business workflows and data architecture.</p>
+              <h3 class="service-title">Systems Integration</h3>
+              <p class="service-desc">Connecting disparate platforms and services seamlessly to streamline your business workflows and data architecture.</p>
             </div>
           </div>
         </div>
@@ -105,63 +114,76 @@
 
       <!-- Central Community Piece -->
       <div class="container-lg my-5">
-        <div class="p-5 text-center" style="background: rgba(0, 255, 68, 0.05); border: 1px solid rgba(0, 255, 68, 0.2); border-radius: 15px;">
-          <h2 style="font-family: 'Outfit', sans-serif; color: #00ff44aa; font-size: 3rem; margin-bottom: 20px;">Community at the Core</h2>
-          <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 30px auto; color: #eee;">
-            Technology is amazing, but people matter most. I'm thankful to serve as a director at the non-profit organisation <strong style="color: #fff;">"Grow Strong"</strong>, dedicated to empowering those in need and introducing underprivileged youngsters into the technology industry.
-          </p>
-          <a href="https://grow-strong.co.za/" target="_blank" class="btn" style="background: #00ff44aa; color: #000; font-weight: bold; border-radius: 30px; padding: 10px 30px; font-size: 1.1rem;">Discover Grow Strong</a>
+        <div class="p-5 community-box d-flex flex-column flex-md-row align-items-center gap-5">
+          <div class="flex-shrink-0 text-center text-md-start">
+            <img src="growstrong.webp" alt="Grow Strong Logo" class="img-fluid shadow-sm" style="height: 160px; width: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(0, 255, 68, 0.4);" />
+          </div>
+          <div class="text-center text-md-start">
+            <h2 class="community-title" style="margin-bottom: 15px; font-size: 2.5rem;">Community at the Core</h2>
+            <p class="community-desc" style="margin-left: 0; margin-right: 0; max-width: 100%; font-size: 1.15rem; margin-bottom: 25px;">
+              Technology is amazing, but people matter most. I'm thankful to serve as a director at the non-profit organisation <strong class="text-white">"Grow Strong"</strong>, dedicated to help underprivileged youngsters in need through a mentorship and skills programme.
+            </p>
+            <a href="https://grow-strong.co.za/" target="_blank" class="btn btn-community">Discover Grow Strong</a>
+          </div>
         </div>
       </div>
 
+      
       <!-- Previous content modified/shortened as a portfolio/about -->
       <div class="container-lg my-5 pt-5 pb-5">
         <div class="row">
-          <div class="col-lg-6 mb-5">
-            <h3 style="font-family: 'Outfit', sans-serif; color: white; margin-bottom: 30px;">About Me</h3>
-            <p style="color: #ccc;">
-              My name is Niels Filter, from sunny South Africa. I'm a technology enthusiast, who has been in the industry for about 17 years. I've been in various roles such as developer, architect, SRE, and dev manager and have worked across various industries.
-              <br/><br/>
-              When I'm not writing code or architecting cloud solutions, I love spending time outdoors with my beautiful wife and 3 boys, or strumming the guitar.
-            </p>
-            <div class="mt-4 d-flex gap-4">
-              <a href="https://www.linkedin.com/in/niels-filter/" target="_blank" class="nostyle d-flex align-items-center gap-2" style="color: #00ccffdd;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+          <div class="col-lg-6 mb-5 pr-lg-5">
+            <h3 class="section-header-title">About Me</h3>
+            <div class="about-content clearfix mb-4">
+              <img src="me.png" alt="Niels Filter" class="img-fluid about-img-float shadow-lg" />
+              <p class="about-desc" style="line-height: 1.8; font-size: 1.05rem;">
+                Hi there 👋, I'm Niels Filter! Operating out of the beautiful Western Cape, I'm a technologist with nearly two decades of experience building and scaling solutions. My background spans diverse roles—from architecting modern systems and leading multiple cross-cultural, international teams to hands-on engineering and business analysis.
+                <br/><br/>
+                Driven by a pragmatic approach to problem-solving, I have a track record of getting things done with precision and quality. Whether working independently or collaborating closely with teams, my focus is always the same: cutting through the noise and keeping approaches simple to add lasting value.
+              </p>
+            </div>
+            
+            <h3  class="section-header-title">Connect with me</h3>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/in/niels-filter/" target="_blank" class="social-btn linkedin-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
                 LinkedIn
               </a>
-              <a href="https://github.com/nielsfilter" target="_blank" class="nostyle d-flex align-items-center gap-2" style="color: #8d2acfdd;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              <a href="https://github.com/nielsfilter" target="_blank" class="social-btn github-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
                 GitHub
               </a>
-              <a href="https://www.youtube.com/@filteredcode" target="_blank" class="nostyle d-flex align-items-center gap-2" style="color: #ff3333dd;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
+              <a href="https://www.youtube.com/@filteredcode" target="_blank" class="social-btn youtube-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/></svg>
                 YouTube
               </a>
             </div>
           </div>
           <div class="col-lg-6">
-            <h3 style="font-family: 'Outfit', sans-serif; color: white; margin-bottom: 30px;">Past Work & Content</h3>
-            <ul class="list-unstyled" style="color: #ccc;">
-              <li class="mb-3">
-                <strong style="color: #fff;">Tic Tac Toe Reinforcement Learning AI</strong><br/>
-                Trained an AI to play tic-tac-toe. <a href="https://tictactoe.filteredcode.co.za/" target="_blank" style="color: #64ffda; text-decoration: none;">Play against it &rarr;</a>
-              </li>
-              <li class="mb-3">
-                <strong style="color: #fff;">Azure Durable Functions</strong><br/>
-                Presented at the .NET Conference on orchestrating stateful workloads. <a href="https://youtu.be/JIQzz7yIHpo?si=4Zk3o1niKNTSI4I7" target="_blank" style="color: #64ffda; text-decoration: none;">Watch session &rarr;</a>
-              </li>
-              <li class="mb-3">
-                <strong style="color: #fff;">Technical Blog</strong><br/>
-                Writing about cloud computing and engineering. <a href="https://filteredcode.wordpress.com/" target="_blank" style="color: #64ffda; text-decoration: none;">Read articles &rarr;</a>
-              </li>
-            </ul>
+            <h3 class="section-header-title">Recent highlights</h3>
+            <div class="past-work-cards">
+              <div class="past-work-card">
+                <h4 class="past-work-title">Presented at the .NET conference</h4>
+                <p class="past-work-desc">Passionate about scalability and distributed architecture, I was given the opportunity to present about <strong>Azure Durable Functions</strong> and how they solve some difficult challenges with distributed systems, especially in the serverless space.</p>
+                <a href="https://youtu.be/JIQzz7yIHpo?si=4Zk3o1niKNTSI4I7" target="_blank" class="past-work-link">Watch session &rarr;</a>
+              </div>
+              <div class="past-work-card">
+                <h4 class="past-work-title">Business digitization</h4>
+                <p class="past-work-desc">Contracted out by <a href="https://kohde.io" target="_blank">kohde.io</a> to architect and lead a high performance team modernizing their multi-level marketing business.</p>
+                <a href="https://www.kohde.io/case-studies/table-charm-direct" target="_blank" class="past-work-link">Check out their case study &rarr;</a>
+              </div>
+              <div class="past-work-card">
+                <h4 class="past-work-title">Tic Tac Toe Reinforcement Learning AI</h4>
+                <p class="past-work-desc">Trained an AI agent to play tic-tac-toe using <strong>Reinforcement Learning</strong>, more speicifcally Q-Learning. It was a fun project, watching the tic-tac-toe agent go from random placements, to becoming unbeatable.</p>
+                <a href="https://tictactoe.filteredcode.co.za/" target="_blank" class="past-work-link">Play against it &rarr;</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <div class="text-center my-footer w-100 mt-5">
         <p class="h-100 m-0 p-3">
-          © 2026 copyright:&nbsp;
+          © <span id="current-year"></span> copyright:&nbsp;
           <a class="text-white" href="https://filteredcode.co.za/">filteredcode.co.za</a>
         </p>
       </div>
@@ -170,18 +192,98 @@
 
     <!-- Creative (Right) Content -->
     <div id="creative-content" class="content-section">
-      <div class="container-lg my-5 pt-5 text-center">
-        <div class="wrapper pt-5">
-          <div class="main-div main-div2">
-            <span class="glow-title large">coming soon</span>
+
+      <!-- Hero Section for Creative -->
+      <div class="container-lg pt-5 pb-5 mt-5">
+        <div class="row pt-5">
+          <div class="col-12 text-center">
+            <h2 class="creative-hero-title">Creative</h2>
+            <div class="creative-hero-divider"></div>
+            <p class="creative-hero-desc">
+              Passionate about <strong class="text-accent-orange">Woodwork</strong>, crafting <strong class="text-accent-orange">Wedding Favours</strong>, and exploring the beauty of <strong class="text-accent-orange">Art</strong>.
+            </p>
           </div>
         </div>
-        <div class="section pt-4">
-          <p style="font-size: 1.5rem; color: #ffb84d; opacity: 0.8;">
-            A space for woodwork, art, and wedding favours.
-          </p>
+      </div>
+
+      <!-- Services Section -->
+      <div class="container-lg">
+        <div class="row pt-5 text-center justify-content-center">
+          
+
+          <div class="col-md-4 mb-5">
+            <div class="service-box creative-box p-4 d-flex flex-column" onclick="window.open('https://www.instagram.com/laufilter_art', '_blank')" style="cursor: pointer; height: 100%; transition: transform 0.3s ease;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffb84d" viewBox="0 0 16 16" class="mb-4 align-self-center">
+                <path d="M16 8c0 3.15-1.866 5.48-4.368 5.704-1.57.14-2.402-.85-2.288-2.02.106-.93-.162-1.874-.951-2.484-.533-.408-1.428-.868-2.603-1.042C3.12 7.788 1.096 6.307 2.155 3.996 3.01 2.103 5.48 1 8 1c4.418 0 8 3.134 8 7zM8 2c-2.126 0-4.149.888-4.94 2.457-.658 1.303.456 2.454 1.705 2.655 1.562.247 2.647.886 3.42 1.48.966.74 1.432 1.95.166 3.073-.615.542-1.348 1.408-1.049 2.502.274 1.01 1.637 1.139 2.583 1.054C13.565 14.935 15 12.986 15 8c0-3.321-3.134-6-7-6z"/>
+              </svg>
+              <h3 class="service-title">Painting lessons</h3>
+              <p class="service-desc flex-grow-1">Learn how to use various mediums, for beginners and advanced artists. Discover your style, learn about techniques, compositions and more.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4 mb-5">
+            <div class="service-box creative-box p-4" style="height: 100%; transition: transform 0.3s ease;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffd699" viewBox="0 0 16 16" class="mb-4">
+                <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg>
+              <h3 class="service-title">Wedding Favours</h3>
+              <p class="service-desc">Personalized gifts, tags, and memorable keepsakes carefully designed to celebrate your special day.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-5">
+            <div class="service-box creative-box p-4" style="height: 100%; transition: transform 0.3s ease;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="#ffb84d" viewBox="0 0 16 16" class="mb-4">
+                <path d="M2.5 2A2.5 2.5 0 0 0 0 4.5v7A2.5 2.5 0 0 0 2.5 14h11a2.5 2.5 0 0 0 2.5-2.5v-7A2.5 2.5 0 0 0 13.5 2h-11ZM1 4.5A1.5 1.5 0 0 1 2.5 3h11A1.5 1.5 0 0 1 15 4.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 11.5v-7Z"/>
+                <path d="M5.5 7a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Zm-1 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm7 2.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Zm-1 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z"/>
+                <path d="M2 5h1v1H2V5Zm6 0h6v1H8V5Zm-6 3h6v1H2V8Zm11 0h1v1h-1V8Zm-1 3h2v1h-2v-1ZM2 11h6v1H2v-1Z"/>
+              </svg>
+              <h3 class="service-title">Woodwork</h3>
+              <p class="service-desc">Creating bespoke, handcrafted custom pieces or furniture, perfect for the home.</p>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Feature highlight for Art -->
+      <div class="container-lg my-5 pt-3 pb-5">
+        <div class="p-5 d-flex flex-column flex-md-row align-items-center gap-5" style="background: rgba(233, 30, 99, 0.05); border: 1px solid rgba(233, 30, 99, 0.3); border-radius: 15px;">
+          <div class="flex-shrink-0 text-center text-md-start">
+            <img src="laurenfilter_art.png" alt="LaurenFilter Art piece" class="img-fluid shadow-lg" style="height: 180px; width: 180px; object-fit: cover; border-radius: 12px; border: 3px solid rgba(233, 30, 99, 0.5);" />
+          </div>
+          <div class="text-center text-md-start">
+            <h2 class="community-title" style="color: #e91e63; margin-bottom: 15px; font-size: 2.5rem;">Discover LaurenFilter Art</h2>
+            <p class="community-desc" style="margin-left: 0; margin-right: 0; max-width: 100%; font-size: 1.15rem; margin-bottom: 25px;">
+              If you're looking for incredibly beautiful, hand-painted commissions, portraits, or canvas pieces, have a look at some of the art at <strong class="text-white">LaurenFilter Art</strong> and reach out to us for a chat.
+            </p>
+            <a href="https://www.instagram.com/laufilter_art" target="_blank" class="btn btn-community" style="background: #e91e63; color: #fff;">Explore on Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Central Community Piece -->
+      <div class="container-lg my-5">
+        <div class="p-5 community-box d-flex flex-column flex-md-row align-items-center gap-5">
+          <div class="flex-shrink-0 text-center text-md-start">
+            <img src="growstrong.webp" alt="Grow Strong Logo" class="img-fluid shadow-sm" style="height: 160px; width: 160px; object-fit: cover; border-radius: 50%; border: 3px solid rgba(0, 255, 68, 0.4);" />
+          </div>
+          <div class="text-center text-md-start">
+            <h2 class="community-title" style="margin-bottom: 15px; font-size: 2.5rem;">Community at the Core</h2>
+            <p class="community-desc" style="margin-left: 0; margin-right: 0; max-width: 100%; font-size: 1.15rem; margin-bottom: 25px;">
+              Art is amazing, but people matter most. I'm thankful to serve as a director at the non-profit organisation <strong class="text-white">"Grow Strong"</strong>, dedicated to help underprivileged youngsters in need through a mentorship and skills programme.
+            </p>
+            <a href="https://grow-strong.co.za/" target="_blank" class="btn btn-community">Discover Grow Strong</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center my-footer w-100 mt-3">
+        <p class="h-100 m-0 p-3">
+          © <span class="current-year-text"></span> copyright:&nbsp;
+          <a class="text-white" href="https://filteredcode.co.za/">filteredcode.co.za</a>
+        </p>
+      </div>
+
     </div>
 
     <script>
@@ -190,11 +292,18 @@
       const creativeContent = document.getElementById('creative-content');
       const btnBack = document.getElementById('btn-back');
 
+      // Set current year
+      const yearEls = document.querySelectorAll('#current-year, .current-year-text');
+      const currentYear = new Date().getFullYear();
+      yearEls.forEach(el => el.textContent = currentYear);
+
+
       function openLeft() {
         splitContainer.classList.add('slide-up');
         document.body.classList.remove('split-active');
         softwareContent.classList.add('active');
         btnBack.classList.add('visible');
+        document.getElementById('logo-software').style.display = 'block';
         window.scrollTo(0,0);
       }
 
@@ -203,6 +312,7 @@
         document.body.classList.remove('split-active');
         creativeContent.classList.add('active');
         btnBack.classList.add('visible');
+        document.getElementById('logo-creative').style.display = 'block';
         window.scrollTo(0,0);
       }
 
@@ -212,6 +322,8 @@
         softwareContent.classList.remove('active');
         creativeContent.classList.remove('active');
         btnBack.classList.remove('visible');
+        document.getElementById('logo-software').style.display = 'none';
+        document.getElementById('logo-creative').style.display = 'none';
         window.scrollTo(0,0);
       }
     </script>
